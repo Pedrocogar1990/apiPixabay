@@ -1,0 +1,19 @@
+{
+    "name": "pedro/pixabai",
+    "description": "Api pixabai",
+    "type": "project",
+    "license": "free",
+    "autoload": {
+        "psr-4": {
+            "Src\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Pedro"
+        }
+    ],
+    "require": {
+        "vlucas/phpdotenv": "^5.5"
+    }
+}
