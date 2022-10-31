@@ -18,9 +18,11 @@ class ApiService
         $datosUrl = file_get_contents(URL);
         $datosJson = json_decode($datosUrl);
         $datosFotos = $datosJson->hits;
-
+        $cont=1;
         foreach ($datosFotos as $foto) {
             $fotos[] = (new Modelos\Fotos)->setFoto($foto->webformatURL)->setAutor($foto->user)->setLikes($foto->likes);
+            if($cont==20) break;
+            $cont++;
         }
         return $fotos;
     }
